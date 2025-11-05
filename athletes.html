@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Athlete Portal – Kautz Performance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">
+        <a href="index.html">Kautz Performance</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="blog.html" class="nav-link">Articles</a>
+        <a href="training.html" class="nav-link">Training</a>
+        <a href="athletes.html" class="nav-link active">Athlete Portal</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Athlete Portal</h1>
+      <p>
+        This area is for athletes currently working with Kautz Performance.
+        You’ll find your active training blocks, check-in links, and important notes.
+      </p>
+      <p class="note">
+        This is not a secure login system. It’s just a light gate so that only
+        athletes who have the code are likely to view these pages.
+      </p>
+    </section>
+
+    <!-- Locked view -->
+    <section class="section" id="athlete-portal-lock">
+      <h2>Enter access code</h2>
+      <form id="athlete-portal-form" class="portal-form">
+        <label for="access-code">Access code from Coach</label>
+        <input type="password" id="access-code" name="access-code" required>
+        <button type="submit" class="btn primary">Unlock</button>
+        <p id="portal-error" class="error-message hidden">
+          Incorrect code. Check with Coach and try again.
+        </p>
+      </form>
+    </section>
+
+    <!-- Unlocked content -->
+    <section class="section hidden" id="athlete-portal-content">
+      <h2>Your training & resources</h2>
+
+      <div class="card-list">
+        <article class="card">
+          <h3>Remote Vert Group A – Weeks 1–3</h3>
+          <p>
+            Current vertical jump block for Remote Vert Group A. If this doesn’t
+            sound like your group, this probably isn’t your plan.
+          </p>
+          <a href="plans/example-plan.html" class="btn secondary">
+            View plan
+          </a>
+        </article>
+
+        <!-- Add more group / plan cards here as you create them -->
+      </div>
+
+      <section class="section">
+        <h3>Check-ins & communication</h3>
+        <p>
+          This is where links for weekly check-in forms or video review
+          submissions will live in the future.
+        </p>
+        <ul>
+          <li>Weekly check-in form (coming soon)</li>
+          <li>Video review instructions (coming soon)</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>General notes</h3>
+        <ul>
+          <li>Read the full week before you start.</li>
+          <li>If you miss a day, don’t try to cram everything into one session.</li>
+          <li>Pain that feels sharp or sketchy → stop and contact me.</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Kautz Performance.</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
